@@ -478,6 +478,28 @@ def generate_instagram_page():
             <strong>Sorting:</strong> Posts gesorteerd van hoogste naar laagste success score</p>
         </div>
         
+        <div class="video-metrics-explanation">
+            <h3>🎬 Instagram Video Metrics Uitgelegd</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; border-left: 4px solid #1976d2;">
+                    <h4><strong>📺 Video Views</strong></h4>
+                    <p><strong>Definitie:</strong> Aantal keer dat video is gestart (minimaal 3 seconden bekeken)</p>
+                    <p><strong>Betekenis:</strong> Totale reach - hoeveel mensen je content hebben gezien</p>
+                    <p><strong>Gewicht in score:</strong> 0.1x (hoge volume, lagere waarde)</p>
+                </div>
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; border-left: 4px solid #28a745;">
+                    <h4><strong>▶️ Video Plays</strong></h4>
+                    <p><strong>Definitie:</strong> Aantal daadwerkelijke starts van de video (op play knop gedrukt)</p>
+                    <p><strong>Betekenis:</strong> Bewuste interesse - mensen kozen ervoor om je video af te spelen</p>
+                    <p><strong>Gewicht in score:</strong> 0.5x (lagere volume, hogere waarde)</p>
+                </div>
+            </div>
+            <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 4px solid #ffc107;">
+                <p><strong>💡 Praktijk:</strong> Video Views zijn meestal hoger (auto-play), Video Plays tonen echte interesse. 
+                Een hoge Views/Plays ratio betekent dat mensen de video zien maar niet bewust afspelen - mogelijk minder boeiende opening.</p>
+            </div>
+        </div>
+        
         <!-- Instagram Section -->
         <section class="platform-section">
             {instagram_table}
