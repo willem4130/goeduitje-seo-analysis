@@ -334,8 +334,24 @@ Winnaar wordt gekozen door onze statushouder chefs. 👨‍🍳"
 
 ## 9. Performance Tracking & Analytics
 
+### 📊 Metrics Definitie & Data Bron
+
+**BELANGRIJK: Onderstaande KPI's zijn doelstellingen/benchmarks ter illustratie. Actuele data is alleen beschikbaar via Google My Business Insights na implementatie.**
+
+**GMB Metrics Uitleg:**
+- **Views:** Hoe vaak uw bedrijfsprofiel is bekeken (bron: GMB Insights)
+- **Direct searches:** Mensen zoeken op uw bedrijfsnaam (40% = gezonde merkherkenning)
+- **Discovery searches:** Mensen vinden u via categorie/service zoekopdrachten (60% = goede vindbaarheid)
+- **Website clicks:** Aantal clicks naar uw website vanuit GMB profiel
+- **Calls:** Telefonische contacten via GMB knop
+- **Direction requests:** Route-aanvragen naar uw locatie
+- **Reviews:** Beoordeling van klanten (4.5+ sterren = uitstekende reputatie)
+- **Response rate:** Percentage reviews waarop u binnen 24 uur reageert
+
+**Data Verificatie:** Alle metrics worden automatisch bijgehouden in Google My Business dashboard na profielinstelling.
+
 ### Key Metrics Dashboard
-**Maandelijkse KPI's:**
+**Maandelijkse KPI Doelstellingen:**
 ```
 Views: Target 1000+ per maand
 Searches: 

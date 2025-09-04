@@ -182,6 +182,21 @@ betaalbare teambuilding nijmegen - Volume: 35/maand - Difficulty: 25
 
 ## 3. Keyword Gap Analyse
 
+### 📊 Metrics Definitie & Data Disclaimer
+
+**BELANGRIJK: Onderstaande cijfers zijn hypothetische voorbeelden ter illustratie van analysemethodiek.**
+
+**Column Definities:**
+- **Vol/maand:** Geschat maandelijks zoekvolume in Nederland (vereist verificatie met Google Keyword Planner)
+- **Difficulty:** SEO moeilijkheidsgraad 0-100 (0=gemakkelijk, 100=zeer moeilijk)
+- **Concurrent Coverage:** Hoeveel van de top 10 concurrenten actief zijn op dit keyword (X/10 format)
+
+**Data Verificatie Vereist:**
+Voor implementatie moeten alle metrics worden geverifieerd met:
+- Google Keyword Planner (gratis, beperkte data)
+- SEMrush/Ahrefs (betaald, gedetailleerde data)
+- Handmatige SERP analyse voor concurrentenpositioning
+
 ### Primaire Keyword Opportunities
 **High Volume, Low Competition:**
 ```

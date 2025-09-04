@@ -38,6 +38,28 @@ GoedUitje.nl is een sociale onderneming die unieke bedrijfsuitjes en groepsactiv
 
 ## 3. Lokale Keyword Analyse
 
+### 📊 Metrics Definitie & Methodologie
+
+**BELANGRIJK: Deze metrics zijn ter illustratie van analysemethodiek en moeten worden vervangen door actuele data.**
+
+**Volume (maandelijks zoekvolume):**
+- **Bron:** Google Keyword Planner, Ubersuggest, of andere keyword tools
+- **Format:** Aantal zoekopdrachten per maand in Nederland
+- **Nauwkeurigheid:** Ranges (bijv. 100-300) zijn vaak nauwkeuriger dan exacte cijfers
+- **Interpretatie:** Hoger volume = meer potentiële bezoekers
+
+**Difficulty Score (concurrentie moeilijkheidsgraad):**
+- **Schaal:** 0-100 (waarbij 0 = zeer gemakkelijk, 100 = vrijwel onmogelijk)
+- **Factoren:** Domain Authority van concurrenten, aantal backlinks, content kwaliteit
+- **Interpretatie:** 
+  - 0-30: Relatief gemakkelijk te ranken
+  - 31-50: Matige moeilijkheid, strategie vereist
+  - 51-100: Hoge moeilijkheid, lange termijn focus nodig
+- **Tools:** Ahrefs, SEMrush, Moz (betaalde tools vereist voor nauwkeurige data)
+
+**Implementatie Opmerking:**
+Voor werkelijke implementatie moeten deze getallen worden geverifieerd met actuele tools zoals Google Keyword Planner (gratis maar beperkt) of betaalde tools voor precieze data.
+
 ### Primaire Keywords (Hoge Prioriteit)
 ```
 bedrijfsuitjes nijmegen - Volume: 170/mnd - Difficulty: 35/100
