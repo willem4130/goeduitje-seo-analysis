@@ -1,0 +1,12 @@
+{
+  "buildCommand": "python3 generate_static_social_overview.py",
+  "outputDirectory": ".",
+  "installCommand": "echo 'No dependencies to install'",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ]
+}

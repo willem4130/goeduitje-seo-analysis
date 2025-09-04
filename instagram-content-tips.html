@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Content Tips - GoedUitje.nl</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .nav-links {
+            margin-bottom: 1rem;
+        }
+        
+        .nav-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background: #e9ecef;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #495057;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .nav-link:hover {
+            background: #dee2e6;
+        }
+        
+        .tips-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .tips-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .success-example {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .success-score {
+            font-weight: 700;
+            color: #28a745;
+        }
+        
+        .tip-list {
+            list-style: none;
+        }
+        
+        .tip-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .tip-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        .avoid-list {
+            list-style: none;
+        }
+        
+        .avoid-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .avoid-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+        
+        .content-template {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📸 Instagram Content Tips</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">🏠 Hoofdmenu</a>
+                <a href="instagram-posts-overview.html" class="nav-link">📊 Instagram Data</a>
+                <a href="linkedin-content-tips.html" class="nav-link">💼 LinkedIn Tips</a>
+            </div>
+            <p>Gebaseerd op de best presterende posts (Success Score Analysis)</p>
+        </header>
+
+        <!-- Top Performing Content Analysis -->
+        <section class="tips-section">
+            <h2>🏆 Wat werkt het beste (Success Score ≥1000)</h2>
+            
+            <div class="success-example">
+                <strong>Top Performer:</strong> Kibbeh Workshop Video<br>
+                <span class="success-score">Success Score: 5,144.7</span><br>
+                <em>Tweetalig workshop behind-the-scenes content</em>
+            </div>
+
+            <ul class="tip-list">
+                <li><strong>Workshop Behind-the-Scenes Videos (45-60 sec)</strong> - Authentieke momenten tijdens koken</li>
+                <li><strong>Tweetalige Captions (NL + EN)</strong> - Bereikt bredere doelgroep</li>
+                <li><strong>Expert Spotlights</strong> - Noem instructeurs bij naam (bijv. "Noura leert ons...")</li>
+                <li><strong>Cultural Education</strong> - Leg culturele achtergrond uit van gerechten</li>
+                <li><strong>Specifieke Details</strong> - Concrete ingrediënten, technieken, verhalen</li>
+            </ul>
+        </section>
+
+        <!-- Content Types Ranking -->
+        <section class="tips-section">
+            <h2>📊 Content Types Ranking (op basis van data)</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                <div style="background: #d4edda; padding: 1rem; border-radius: 6px;">
+                    <strong>1. Workshop Videos</strong><br>
+                    <span class="highlight">Avg Score: 2000+</span><br>
+                    Behind-the-scenes kookprocessen
+                </div>
+                <div style="background: #d1ecf1; padding: 1rem; border-radius: 6px;">
+                    <strong>2. Educational Content</strong><br>
+                    <span class="highlight">Avg Score: 500+</span><br>
+                    Technieken & tips uitleggen
+                </div>
+                <div style="background: #fff3cd; padding: 1rem; border-radius: 6px;">
+                    <strong>3. Community Stories</strong><br>
+                    <span class="highlight">Avg Score: 200+</span><br>
+                    Deelnemerervaringen delen
+                </div>
+                <div style="background: #f8d7da; padding: 1rem; border-radius: 6px;">
+                    <strong>4. Teaser Content</strong><br>
+                    <span class="highlight">Avg Score: <50</span><br>
+                    Vage hints over workshops
+                </div>
+            </div>
+        </section>
+
+        <!-- Ready-to-Use Templates -->
+        <section class="tips-section">
+            <h2>📝 Ready-to-Use Caption Templates</h2>
+            
+            <h3>Template 1: Workshop Behind-the-Scenes</h3>
+            <div class="content-template">
+[Specifiek gerecht] maken? [Moeilijkheidsgraad]! 
+
+Tijdens onze workshop van [datum] leerden [aantal] deelnemers de geheimen van [culturele keuken]. [Instructeur naam] deelde [specifieke tip/verhaal].
+
+Deze [gerecht] heeft [cultureel detail] en is perfect voor [gelegenheid/seizoen].
+
+Volgende workshop: [datum] - nog plekken beschikbaar! 
+
+#workshop #[cultuur]cooking #goeduitje #[locatie]
+            </div>
+
+            <h3>Template 2: Educational/Cultural</h3>
+            <div class="content-template">
+Wist je dat [cultureel feit over gerecht]? 
+
+In [land/regio] wordt [gerecht] traditioneel [wanneer/hoe] gemaakt. De belangrijkste stap is [techniek] - precies wat [instructeur] ons liet zien!
+
+Tip van [instructeur]: [praktische tip]
+
+Leer het zelf in onze [gerecht] workshop!
+
+#culturalfood #[land]cuisine #cookingtips #traditionalcooking
+            </div>
+        </section>
+
+        <!-- What to Avoid -->
+        <section class="tips-section">
+            <h2>❌ Wat juist NIET werkt (Success Score <50)</h2>
+            
+            <ul class="avoid-list">
+                <li><strong>Vage Teasers</strong> - "We overwegen nieuwe workshops..." (Score: 21-48)</li>
+                <li><strong>Generic Announcements</strong> - Zonder concrete details</li>
+                <li><strong>Te Korte Videos</strong> - Minder dan 30 seconden krijgt weinig engagement</li>
+                <li><strong>Alleen Nederlandse Tekst</strong> - Tweetalig content scoort 3x hoger</li>
+                <li><strong>Geen Expert Mention</strong> - Posts zonder instructeur namen scoren lager</li>
+            </ul>
+        </section>
+
+        <!-- Action Plan -->
+        <section class="tips-section">
+            <h2>🎯 Concrete Actieplan (Volgende 4 Weken)</h2>
+            
+            <div style="background: #e3f2fd; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                <strong>Week 1-2: Focus op Top Performers</strong>
+                <ul style="margin-top: 0.5rem;">
+                    <li>2x Workshop behind-the-scenes videos per week</li>
+                    <li>Alle captions tweetalig maken</li>
+                    <li>Instructeurs altijd bij naam noemen</li>
+                </ul>
+            </div>
+
+            <div style="background: #f8f9fa; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                <strong>Week 3-4: Content Diversificatie</strong>
+                <ul style="margin-top: 0.5rem;">
+                    <li>1x Educational post per week (culturele achtergrond)</li>
+                    <li>1x Community story (deelnemer testimonial)</li>
+                    <li>Stop met vage teaser content</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 2rem; padding: 1rem; color: #666;">
+            <small>Gebaseerd op werkelijke Instagram data (September 2025) | Success Score Algoritme: (Likes × 1) + (Comments × 5) + (Video Views × 0.1) + (Video Plays × 0.5)</small>
+        </footer>
+    </div>
+</body>
+</html>

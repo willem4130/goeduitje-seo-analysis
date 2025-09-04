@@ -22,17 +22,27 @@
 
 ## 2. Content Mix Strategie
 
-### 📊 Content Distribution (Gebaseerd op Performance Data)
+### 📊 Content Distribution (Gebaseerd op SUCCESS SCORE Analysis)
 
-#### Instagram (2 posts/week)
-- **60%** Workshop Behind-the-Scenes (Video)
-- **25%** Educational/Cultural Content 
-- **15%** Community Stories
+#### Instagram (2 posts/week) - Focus op hoogste scorers
+- **70%** Workshop Behind-the-Scenes (Video) - **Success Score: 1000-5000+**
+  - Tweetalige captions (NL/EN)
+  - Expert mentions (Noura, Zinab, etc.)
+  - 45-60 seconden video length
+- **20%** Educational/Cultural Content - **Success Score: 200-500**
+  - Specifieke culturele achtergrondinformatie
+  - Concrete technieken en tips
+- **10%** Community Stories - **Success Score: 100-300**
+  - STOP met vage teasers (Score <50)
 
-#### LinkedIn (1-2 posts/week) 
-- **50%** Professional Workshop Updates
-- **30%** Team/Impact Stories
-- **20%** Industry Insights
+#### LinkedIn (1-2 posts/week) - Professional focus
+- **60%** Workshop Recaps met concrete resultaten - **Success Score: 60-124**
+  - Specifieke aantallen deelnemers
+  - Instructeur credibility
+  - Business impact focus
+- **25%** Expert/Team Spotlights - **Success Score: 40-80**
+- **15%** Community Impact Stories - **Success Score: 30-60**
+  - STOP met vage updates (Score 0-20)
 
 #### Facebook (1 post/week)
 - **70%** Community/Event Updates
@@ -85,16 +95,19 @@ Weekend: [PLANNING - Next week prep]
 
 ## 4. Concrete Content Calendar - Oktober 2025
 
-### Week 1 (30 Sep - 6 Okt)
+### Week 1 (30 Sep - 6 Okt) - SUCCESS SCORE OPTIMIZED
 **Dinsdag 1 Okt:**
 - **Instagram:** Video - "Falafel maken met Amira - eerste stappen" (60 sec behind-the-scenes)
-- **LinkedIn:** "Deze week leren 8 professionals de kunst van Midden-Oosterse keuken"
+  - 🎯 **Target Score: 1000+** | Tweetalige caption | Expert mention: "Amira toont ons..."
+- **LinkedIn:** "Gisteren: 8 professionals leerden authentieke Midden-Oosterse technieken"
+  - 🎯 **Target Score: 80+** | Concrete aantal + resultaten
 
 **Woensdag 2 Okt:**
 - **Facebook:** "Open Kookworkshop deze zondag - nog 3 plekken beschikbaar!"
 
 **Vrijdag 4 Okt:**
-- **Instagram:** Educational - "Wist je dat...? Falafel geschiedenis" (carrousel post)
+- **Instagram:** Educational - "3 geheimen van perfecte falafel - Amira's tips" (video tips)
+  - 🎯 **Target Score: 400+** | Specifieke technieken + expert credibility
 
 ### Week 2 (7-13 Okt)
 **Dinsdag 8 Okt:**
