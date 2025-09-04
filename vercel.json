@@ -3,6 +3,7 @@
   "outputDirectory": ".",
   "installCommand": "echo 'No dependencies to install'",
   "framework": null,
+  "public": true,
   "rewrites": [
     {
       "source": "/",
