@@ -147,6 +147,104 @@
         .impact .section-icon { color: var(--accent-color); }
         .social .section-icon { color: var(--accent-color); }
         
+        .client-priority-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+        
+        .client-priority-section .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            border: none;
+        }
+        
+        .client-priority-section .section-title {
+            color: white;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .client-priority-section .section-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        
+        .priority-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .priority-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .priority-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .instagram-style {
+            background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+            color: white;
+        }
+        
+        .linkedin-style {
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+            color: white;
+        }
+        
+        .tips-style {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+        }
+        
+        .strategy-style {
+            background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+            color: white;
+        }
+        
+        .planning-style {
+            background: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%);
+            color: white;
+        }
+        
+        .context-section {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .context-section .section-header {
+            justify-content: center;
+            border: none;
+            padding-bottom: 0;
+        }
+        
+        .context-section .section-title {
+            color: #6c757d;
+            font-size: 1.4rem;
+        }
+        
+        .context-section .section-icon {
+            color: #6c757d;
+            font-size: 1.8rem;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -159,6 +257,19 @@
             .analysis-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .priority-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .client-priority-section {
+                padding: 1.5rem;
+            }
+            
+            .priority-link {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+            }
         }
     </style>
 </head>
@@ -168,7 +279,37 @@
             <h1>SEO & GEO Analyse</h1>
             <p>GoedUitje.nl - Analyse Overzicht</p>
         </header>
-        
+
+        <!-- Prominent Client Section -->
+        <section class="client-priority-section">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2 class="section-title">Lezen voor Guus</h2>
+            </div>
+            <p style="text-align: center; margin-bottom: 1.5rem; color: #666; font-style: italic;">
+                De belangrijkste analyses en concrete actieplannen voor directe implementatie
+            </p>
+            <div class="priority-links">
+                <a href="instagram-posts-overview.html" class="priority-link instagram-style">📸 Instagram Posts Overview</a>
+                <a href="linkedin-posts-overview.html" class="priority-link linkedin-style">💼 LinkedIn Posts Overview</a>
+                <a href="instagram-content-tips.html" class="priority-link tips-style">🎯 Instagram Content Tips</a>
+                <a href="linkedin-content-tips.html" class="priority-link tips-style">🎯 LinkedIn Content Tips</a>
+                <a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/social-media-strategie.md" class="priority-link strategy-style">📋 Social Media Strategie</a>
+                <a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/contentplanning-2025.md" class="priority-link planning-style">📅 Contentplanning 2025</a>
+            </div>
+        </section>
+
+        <!-- Background/Context Section -->
+        <section class="context-section">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <div class="section-icon">🤖</div>
+                <h2 class="section-title">AI Context / Achtergrond / Scrape Details</h2>
+            </div>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666; font-style: italic;">
+                Technische analyses, methodologie en achtergrond informatie
+            </p>
+        </section>
+
         <div class="analysis-grid">
             <!-- Technische SEO -->
             <section class="analysis-section technical">
@@ -213,18 +354,12 @@
             <section class="analysis-section social">
                 <div class="section-header">
                     <div class="section-icon">📱</div>
-                    <h2 class="section-title">Social Media Analyse</h2>
+                    <h2 class="section-title">Social Media - Technische Details</h2>
                 </div>
                 <ul class="file-links">
-                    <li><a href="instagram-posts-overview.html" class="file-link" style="background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%); border-color: #833ab4; color: white; font-weight: 600;">📸 Instagram Posts Overview</a></li>
-                    <li><a href="linkedin-posts-overview.html" class="file-link" style="background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%); border-color: #0077b5; color: white; font-weight: 600;">💼 LinkedIn Posts Overview</a></li>
-                    <li><a href="instagram-content-tips.html" class="file-link" style="background: #e8f5e8; border-color: #28a745; color: #155724; font-weight: 600;">🎯 Instagram Content Tips</a></li>
-                    <li><a href="linkedin-content-tips.html" class="file-link" style="background: #e8f5e8; border-color: #28a745; color: #155724; font-weight: 600;">🎯 LinkedIn Content Tips</a></li>
                     <li><a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/instagram-analyse.md" class="file-link">Instagram Analyse</a></li>
                     <li><a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/linkedin-analyse.md" class="file-link">LinkedIn Analyse</a></li>
-                    <li><a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/social-media-strategie.md" class="file-link">Social Media Strategie</a></li>
                     <li><a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/post-performance-analysis.md" class="file-link">Post Performance Analysis</a></li>
-                    <li><a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/contentplanning-2025.md" class="file-link">Contentplanning 2025 (Updated)</a></li>
                     <li><a href="SEO_GEO_Analyse_GoedUitje/07_Social_Media_Analyse/content-dashboard-ready-to-use.md" class="file-link">Ready-to-Use Content Dashboard</a></li>
                 </ul>
             </section>
