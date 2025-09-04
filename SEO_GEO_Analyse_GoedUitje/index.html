@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO & GEO Analyse - GoedUitje.nl</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-chart-line"></i>
+                <h1>SEO & GEO Analyse</h1>
+                <span class="subtitle">GoedUitje.nl - Strategische Digitale Marketing Analyse</span>
+            </div>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Executive Dashboard -->
+        <section class="dashboard">
+            <h2><i class="fas fa-tachometer-alt"></i> Executive Dashboard</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line" style="color: #28a745;"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Traffic Groei Potentieel</h3>
+                        <div class="metric-value">+2,900%</div>
+                        <div class="metric-subtitle">Binnen 12 maanden</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-euro-sign" style="color: #007bff;"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>ROI Projectie</h3>
+                        <div class="metric-value">39,154%</div>
+                        <div class="metric-subtitle">24 maanden ROI</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-map-marker-alt" style="color: #dc3545;"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Lokale SEO Score</h3>
+                        <div class="metric-value">2/10</div>
+                        <div class="metric-subtitle">Huidige status</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-share-alt" style="color: #fd7e14;"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Social Engagement</h3>
+                        <div class="metric-value">3.2%</div>
+                        <div class="metric-subtitle">Huidige rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts">
+            <div class="chart-container">
+                <h3>Traffic Groei Projectie</h3>
+                <canvas id="trafficChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>ROI Ontwikkeling</h3>
+                <canvas id="roiChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Navigation Menu -->
+        <section class="navigation">
+            <h2><i class="fas fa-sitemap"></i> Analyse Secties</h2>
+            <div class="nav-grid">
+                <a href="01_Management_Samenvatting/executive-summary.html" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Management Samenvatting</h3>
+                    <p>Executive summary en belangrijkste bevindingen</p>
+                    <div class="nav-status complete">Voltooid</div>
+                </a>
+
+                <a href="02_Technische_SEO_Analyse/technical-audit.html" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Technische SEO Analyse</h3>
+                    <p>Performance, mobile SEO en technische audit</p>
+                    <div class="nav-status complete">Voltooid</div>
+                </a>
+
+                <a href="03_GEO_Lokale_SEO_Analyse/local-seo-audit.html" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>GEO & Lokale SEO</h3>
+                    <p>Lokale zichtbaarheid en Google My Business</p>
+                    <div class="nav-status complete">Voltooid</div>
+                </a>
+
+                <a href="07_Social_Media_Analyse/social-media-strategie.html" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Social Media Analyse</h3>
+                    <p>LinkedIn & Instagram data en strategie</p>
+                    <div class="nav-status complete">Voltooid</div>
+                </a>
+
+                <a href="04_Tone_of_Voice_Analyse/brand-voice-analysis.html" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Tone of Voice</h3>
+                    <p>Merkidentiteit en communicatiestijl</p>
+                    <div class="nav-status complete">Voltooid</div>
+                </a>
+
+                <a href="05_Verbetervoorstellen/quick-wins.html" class="nav-card">
+                    <div class="nav-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Verbetervoorstellen</h3>
+                    <p>Quick wins, medium-term en long-term</p>
+                    <div class="nav-status complete">Voltooid</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h2><i class="fas fa-bolt"></i> Direct Acties</h2>
+            <div class="action-grid">
+                <div class="action-card high-priority">
+                    <h4><i class="fas fa-exclamation-circle"></i> Hoge Prioriteit</h4>
+                    <ul>
+                        <li>Google My Business claimen en optimaliseren</li>
+                        <li>Meta tags en titles optimaliseren</li>
+                        <li>Schema markup implementeren</li>
+                    </ul>
+                    <div class="action-impact">Impact: +260% traffic binnen 3 maanden</div>
+                </div>
+                <div class="action-card medium-priority">
+                    <h4><i class="fas fa-clock"></i> Medium Prioriteit</h4>
+                    <ul>
+                        <li>Content marketing strategie</li>
+                        <li>Lokale citatie opbouw</li>
+                        <li>Social media optimalisatie</li>
+                    </ul>
+                    <div class="action-impact">Impact: +2,900% traffic binnen 12 maanden</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Data Preview -->
+        <section class="social-preview">
+            <h2><i class="fas fa-chart-bar"></i> Social Media Data</h2>
+            <div class="social-grid">
+                <div class="social-card linkedin">
+                    <h3><i class="fab fa-linkedin"></i> LinkedIn Data</h3>
+                    <div class="social-stats">
+                        <span>93 Posts</span>
+                        <span>104 Followers</span>
+                        <span>3.2% Engagement</span>
+                    </div>
+                    <a href="07_Social_Media_Analyse/linkedin-data.html" class="btn-social">Bekijk LinkedIn Data</a>
+                </div>
+                <div class="social-card instagram">
+                    <h3><i class="fab fa-instagram"></i> Instagram Data</h3>
+                    <div class="social-stats">
+                        <span>99 Posts</span>
+                        <span>Video Focus</span>
+                        <span>2.8% Engagement</span>
+                    </div>
+                    <a href="07_Social_Media_Analyse/instagram-data.html" class="btn-social">Bekijk Instagram Data</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 SEO & GEO Analyse voor GoedUitje.nl</p>
+                <p>Gegenereerd op: <span id="currentDate"></span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

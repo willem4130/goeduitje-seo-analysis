@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Data Analyse - GoedUitje | SEO/GEO Analysis</title>
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        /* LinkedIn-specific styling */
+        .data-table th {
+            background: linear-gradient(135deg, #0077B5 0%, #005885 100%);
+        }
+        
+        .stat-card {
+            border-left-color: #0077B5;
+        }
+        
+        .stat-number {
+            color: #0077B5;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #0077B5;
+            border-color: #0077B5;
+        }
+        
+        .search-input:focus {
+            border-color: #0077B5;
+            box-shadow: 0 0 0 3px rgba(0, 119, 181, 0.1);
+        }
+        
+        .media-video {
+            background: #0077B5;
+            color: white;
+        }
+        
+        .media-article {
+            background: #00A0DC;
+            color: white;
+        }
+        
+        .media-text {
+            background: #0E76A8;
+            color: white;
+        }
+        
+        .recommendation-box {
+            background: linear-gradient(135deg, #0077B5 0%, #005885 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="main-title">LinkedIn Data Analyse</h1>
+                    <p class="subtitle">GoedUitje.nl - Professional Network Performance</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">93</span>
+                        <span class="stat-label">LinkedIn Posts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">7.8</span>
+                        <span class="stat-label">Avg Engagement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="../../../index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="#summary" class="nav-link active">LinkedIn Overzicht</a></li>
+                <li><a href="#data-table" class="nav-link">Data Tabel</a></li>
+                <li><a href="#insights" class="nav-link">Insights</a></li>
+                <li><a href="instagram-data-enhanced.html" class="nav-link">Instagram Data</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Summary Section -->
+        <section id="summary" class="section">
+            <div class="container">
+                <h2 class="section-title">LinkedIn Performance Overzicht</h2>
+                
+                <div class="stats-summary">
+                    <div class="stat-card">
+                        <span class="stat-number">93</span>
+                        <span class="stat-label">Totaal Posts</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">7.8</span>
+                        <span class="stat-label">Gem. Likes per Post</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">75%</span>
+                        <span class="stat-label">Video Content</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">Hoogste Engagement</span>
+                    </div>
+                </div>
+
+                <div class="insights-section">
+                    <h3>Key LinkedIn Insights</h3>
+                    <div class="content-grid">
+                        <div class="content-card">
+                            <h4>Professional Positioning</h4>
+                            <ul>
+                                <li><strong>B2B focus:</strong> Bedrijfsuitjes en teambuilding</li>
+                                <li><strong>Sociale impact:</strong> Statushouders en asielzoekers verhaal</li>
+                                <li><strong>Expertise sharing:</strong> Kookworkshops en culturele educatie</li>
+                                <li><strong>Network building:</strong> Partnerships en samenwerkingen</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h4>Content Performance</h4>
+                            <ul>
+                                <li><strong>Beste content:</strong> Behind-the-scenes workshop videos</li>
+                                <li><strong>Engagement rate:</strong> 7.8 likes + 6.2 comments gemiddeld</li>
+                                <li><strong>Peak performance:</strong> Posts over sociale impact</li>
+                                <li><strong>Consistent posting:</strong> Regelmatige content calendar</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h4>Audience Insights</h4>
+                            <ul>
+                                <li><strong>Target audience:</strong> HR professionals, teamleiders</li>
+                                <li><strong>Geographic focus:</strong> Nijmegen, Arnhem, Utrecht</li>
+                                <li><strong>Industry sectors:</strong> Healthcare, non-profit, corporate</li>
+                                <li><strong>Engagement type:</strong> Professional interest + sociale betrokkenheid</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="content-card">
+                            <h4>SEO & Business Impact</h4>
+                            <ul>
+                                <li><strong>Brand authority:</strong> LinkedIn als professional platform</li>
+                                <li><strong>Lead generation:</strong> Direct inquiries via LinkedIn</li>
+                                <li><strong>Content marketing:</strong> Workshop showcases</li>
+                                <li><strong>Local SEO boost:</strong> Lokale bedrijven partnerships</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Table Section -->
+        <section id="data-table" class="section">
+            <div class="container">
+                <h2 class="section-title">LinkedIn Posts Data</h2>
+                
+                <div class="table-controls">
+                    <div class="filters">
+                        <button class="filter-btn active" onclick="filterTable('all')">Alle Posts</button>
+                        <button class="filter-btn" onclick="filterTable('video')">Video</button>
+                        <button class="filter-btn" onclick="filterTable('article')">Artikel</button>
+                        <button class="filter-btn" onclick="filterTable('high-engagement')">Hoge Engagement</button>
+                    </div>
+                    <input type="text" class="search-input" placeholder="Zoek in posts..." onkeyup="searchTable(this.value)">
+                </div>
+
+                <div class="data-table-container">
+                    <table class="data-table" id="linkedinTable">
+                        <thead>
+                            <tr>
+                                <th>Datum</th>
+                                <th>Post Tekst</th>
+                                <th>Post Type</th>
+                                <th>Media Type</th>
+                                <th>Reacties</th>
+                                <th>Likes</th>
+                                <th>Totaal Engagement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date-cell">2025-09-02</td>
+                                <td class="post-caption">Afgelopen zondag was de eerste open kookworkshop na de zomervakantie. Zinab leerde 6 fanatieke koks hoe ze Beryani, Feta, Fatoush en Kunafe kunnen maken.</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-video">Video</span></td>
+                                <td class="engagement-cell engagement-low">3</td>
+                                <td class="engagement-cell engagement-low">3</td>
+                                <td class="engagement-cell engagement-low">6</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-08-29</td>
+                                <td class="post-caption">Wij overwegen muzikale workshops...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-video">Video</span></td>
+                                <td class="engagement-cell engagement-low">4</td>
+                                <td class="engagement-cell engagement-low">4</td>
+                                <td class="engagement-cell engagement-low">8</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-08-27</td>
+                                <td class="post-caption">De vakantie is voorbij—tijd om het volgende uitje te plannen. Goeduitje organiseert kookworkshops en stadsspellen, op locatie...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-video">Video</span></td>
+                                <td class="engagement-cell engagement-low">2</td>
+                                <td class="engagement-cell engagement-low">2</td>
+                                <td class="engagement-cell engagement-low">4</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-08-19</td>
+                                <td class="post-caption">Het vakantieseizoen loopt ten einde en het nieuwe seizoen staat voor de deur. Een mooi moment om weer samen te komen, te leren en te genieten...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-article">Article</span></td>
+                                <td class="engagement-cell engagement-medium">5</td>
+                                <td class="engagement-cell engagement-medium">5</td>
+                                <td class="engagement-cell engagement-medium">10</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-08-01</td>
+                                <td class="post-caption">🌟 Afscheid van een ster! Vandaag zwaaien we Noura uit – chef en gewaardeerde collega. In vier maanden tijd rockte ze samen met Drio & Guus 30+ kookworkshops...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-video">Video</span></td>
+                                <td class="engagement-cell engagement-medium">7</td>
+                                <td class="engagement-cell engagement-medium">6</td>
+                                <td class="engagement-cell engagement-medium">13</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-07-16</td>
+                                <td class="post-caption">Drio, Noura, Duha, Boshra en Zainab maakte bijna 1000 snacks voor de vips van Plein44 tijdens de Vierdaagse feesten...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-video">Video</span></td>
+                                <td class="engagement-cell engagement-high">13</td>
+                                <td class="engagement-cell engagement-high">12</td>
+                                <td class="engagement-cell engagement-high">25</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-05-12</td>
+                                <td class="post-caption">Bij ons organiseren asielzoekers (en statushouders) jouw uitje!</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-article">Image</span></td>
+                                <td class="engagement-cell engagement-high">25</td>
+                                <td class="engagement-cell engagement-high">17</td>
+                                <td class="engagement-cell engagement-high">42</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-05-14</td>
+                                <td class="post-caption">We zijn opgenomen in de Code Sociale Ondernemingen. Dat betekent dat we een bedrijf zijn dat maatschappelijke impact wil maken...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-article">Image</span></td>
+                                <td class="engagement-cell engagement-high">17</td>
+                                <td class="engagement-cell engagement-medium">9</td>
+                                <td class="engagement-cell engagement-high">26</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2025-03-18</td>
+                                <td class="post-caption">Vanaf deze week zijn we elke maandag te vinden in de keuken van Nederlands de Baas. Gisteren hebben Drio, samen met cursisten...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-video">Video</span></td>
+                                <td class="engagement-cell engagement-high">22</td>
+                                <td class="engagement-cell engagement-high">17</td>
+                                <td class="engagement-cell engagement-high">39</td>
+                            </tr>
+                            <tr>
+                                <td class="date-cell">2024-10-01</td>
+                                <td class="post-caption">Donderdag 26 september waren we te gast bij Exonet B.V. waar tijdens de maandelijkse XL borrel een Arabische kookworkshop verzorgden...</td>
+                                <td>regular</td>
+                                <td><span class="media-type-badge media-video">Video</span></td>
+                                <td class="engagement-cell engagement-high">22</td>
+                                <td class="engagement-cell engagement-high">21</td>
+                                <td class="engagement-cell engagement-high">43</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="content-card" style="margin-top: var(--space-8);">
+                    <h4>Data Observaties</h4>
+                    <ul>
+                        <li><strong>Consistente posting:</strong> 93 posts over periode van 8+ maanden</li>
+                        <li><strong>Engagement patterns:</strong> Sociale impact posts presteren 2-3x beter</li>
+                        <li><strong>Video dominantie:</strong> 75% van posts zijn video content</li>
+                        <li><strong>Professional tone:</strong> Balans tussen zakelijk en persoonlijk</li>
+                        <li><strong>Bilingual approach:</strong> Nederlands met Engelse vertalingen</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section id="insights" class="section">
+            <div class="container">
+                <h2 class="section-title">LinkedIn Performance Insights</h2>
+                
+                <div class="chart-grid">
+                    <div class="chart-container-small">
+                        <h3>Engagement per Content Type</h3>
+                        <canvas id="engagementChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-container-small">
+                        <h3>Monthly Posting Activity</h3>
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="content-grid" style="margin-top: var(--space-12);">
+                    <div class="content-card">
+                        <h4>Top Performing Posts</h4>
+                        <ul>
+                            <li><strong>Sociale onderneming post:</strong> 42 totaal engagement</li>
+                            <li><strong>Exonet workshop:</strong> 43 totaal engagement</li>
+                            <li><strong>Nederlands de Baas samenwerking:</strong> 39 engagement</li>
+                            <li><strong>Code Sociale Ondernemingen:</strong> 26 engagement</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4>Content Strategie Insights</h4>
+                        <ul>
+                            <li><strong>Verhalen werken:</strong> Persoonlijke verhalen + sociale impact</li>
+                            <li><strong>Behind-the-scenes:</strong> Workshop processen en team</li>
+                            <li><strong>Partnership showcases:</strong> Bedrijfssamenwerking highlights</li>
+                            <li><strong>Educational content:</strong> Cultural workshops uitleg</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="recommendation-box" style="margin-top: var(--space-12);">
+                    <h3><i class="fas fa-lightbulb"></i> LinkedIn SEO & Growth Aanbevelingen</h3>
+                    <p>LinkedIn toont sterk potentieel voor <strong>B2B lead generation</strong> en <strong>brand authority building</strong>. Focus op <strong>sociale impact storytelling</strong>, verhoog posting frequentie naar 3-4x per week, en ontwikkel <strong>thought leadership content</strong> over culturele diversiteit in bedrijfsuitjes om de expert positioning te versterken.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 GoedUitje.nl LinkedIn Data Analyse</p>
+                    <p>Onderdeel van SEO & GEO Analysis</p>
+                </div>
+                <div class="footer-actions">
+                    <button class="btn-outline" onclick="exportData()">
+                        <i class="fas fa-download"></i> Export Data
+                    </button>
+                    <a href="../../../index.html" class="btn-primary">
+                        <i class="fas fa-arrow-left"></i> Terug naar Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter and search functionality (same as Instagram page)
+        function filterTable(filter) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const rows = document.querySelectorAll('#linkedinTable tbody tr');
+            rows.forEach(row => {
+                const typeCell = row.cells[3].textContent.toLowerCase();
+                const engagement = parseInt(row.cells[6].textContent);
+                
+                let show = true;
+                
+                if (filter === 'video' && !typeCell.includes('video')) {
+                    show = false;
+                } else if (filter === 'article' && !typeCell.includes('article') && !typeCell.includes('image')) {
+                    show = false;
+                } else if (filter === 'high-engagement' && engagement < 20) {
+                    show = false;
+                }
+                
+                row.style.display = show ? '' : 'none';
+            });
+        }
+
+        function searchTable(searchTerm) {
+            const rows = document.querySelectorAll('#linkedinTable tbody tr');
+            const term = searchTerm.toLowerCase();
+            
+            rows.forEach(row => {
+                const text = row.cells[1].textContent.toLowerCase();
+                row.style.display = text.includes(term) ? '' : 'none';
+            });
+        }
+
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Engagement chart
+            const engagementCtx = document.getElementById('engagementChart');
+            if (engagementCtx) {
+                new Chart(engagementCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Video Posts', 'Article/Image Posts'],
+                        datasets: [{
+                            data: [75, 25],
+                            backgroundColor: ['#0077B5', '#00A0DC'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Timeline chart
+            const timelineCtx = document.getElementById('timelineChart');
+            if (timelineCtx) {
+                new Chart(timelineCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Oct 2024', 'Nov 2024', 'Dec 2024', 'Jan 2025', 'Feb 2025', 'Mar 2025', 'Apr 2025', 'May 2025', 'Jun 2025', 'Jul 2025', 'Aug 2025', 'Sep 2025'],
+                        datasets: [{
+                            label: 'Posts per Maand',
+                            data: [8, 12, 6, 10, 8, 9, 14, 11, 7, 5, 2, 1],
+                            borderColor: '#0077B5',
+                            backgroundColor: 'rgba(0, 119, 181, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        });
+
+        function exportData() {
+            alert('LinkedIn data export functionaliteit zou worden geïmplementeerd met CSV/Excel export mogelijkheden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Wins - GoedUitje SEO Analysis</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .quick-win-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-lg);
+            border-left: 6px solid var(--success);
+            margin-bottom: var(--space-8);
+            transition: all var(--transition-fast);
+        }
+        
+        .quick-win-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .quick-win-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: var(--space-6);
+        }
+        
+        .quick-win-title {
+            color: var(--success);
+            margin-bottom: var(--space-2);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .quick-win-badges {
+            display: flex;
+            gap: var(--space-2);
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-time {
+            background: var(--success);
+            color: white;
+        }
+        
+        .badge-impact {
+            background: var(--info);
+            color: white;
+        }
+        
+        .badge-cost {
+            background: var(--warning);
+            color: white;
+        }
+        
+        .implementation-steps {
+            background: var(--gray-50);
+            border-radius: var(--radius-md);
+            padding: var(--space-6);
+            margin: var(--space-6) 0;
+        }
+        
+        .step-list {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-12);
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .step-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--success);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+        
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin-top: var(--space-6);
+        }
+        
+        .impact-metric {
+            text-align: center;
+            padding: var(--space-4);
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: var(--radius-md);
+        }
+        
+        .impact-number {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--success);
+            display: block;
+            margin-bottom: var(--space-1);
+        }
+        
+        .impact-label {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+        }
+        
+        .priority-indicator {
+            position: absolute;
+            top: var(--space-6);
+            right: var(--space-6);
+            background: var(--success);
+            color: white;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+        }
+        
+        .checklist {
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: var(--space-6);
+            margin-top: var(--space-8);
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-3) 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            position: relative;
+            background: white;
+        }
+        
+        .checklist-checkbox.checked {
+            background: var(--success);
+            border-color: var(--success);
+        }
+        
+        .checklist-checkbox.checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            margin: var(--space-4) 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success) 0%, var(--primary-color) 100%);
+            width: 0%;
+            transition: width var(--transition-normal);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="main-title">Quick Wins Implementatie</h1>
+                    <p class="subtitle">0-30 dagen - Onmiddellijke SEO verbeteringen</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">+260%</span>
+                        <span class="stat-label">Traffic Boost Potentieel</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">€4.575</span>
+                        <span class="stat-label">Totaal Investering</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="../index.html" class="nav-link">Dashboard</a></li>
+                <li><a href="#overview" class="nav-link active">Overzicht</a></li>
+                <li><a href="#quick-wins" class="nav-link">Quick Wins</a></li>
+                <li><a href="#implementation" class="nav-link">Implementatie</a></li>
+                <li><a href="#tracking" class="nav-link">Voortgang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="container">
+                <h2 class="section-title">Quick Wins Overview</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Waarom Quick Wins?</h3>
+                        <ul>
+                            <li><strong>Snelle resultaten:</strong> Zichtbare verbetering binnen 30 dagen</li>
+                            <li><strong>Hoge ROI:</strong> Minimale investering, maximale impact</li>
+                            <li><strong>Momentum building:</strong> Motivatie voor verdere optimalisaties</li>
+                            <li><strong>Foundation laying:</strong> Basis voor langetermijn strategieën</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Verwachte Resultaten</h3>
+                        <div class="impact-metrics">
+                            <div class="impact-metric">
+                                <span class="impact-number">+260%</span>
+                                <span class="impact-label">Traffic Growth</span>
+                            </div>
+                            <div class="impact-metric">
+                                <span class="impact-number">+3-5</span>
+                                <span class="impact-label">Ranking Posities</span>
+                            </div>
+                            <div class="impact-metric">
+                                <span class="impact-number">+25%</span>
+                                <span class="impact-label">Click-Through Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Wins Section -->
+        <section id="quick-wins" class="section">
+            <div class="container">
+                <h2 class="section-title">Quick Wins Actieplan</h2>
+                
+                <!-- Quick Win 1: Google My Business -->
+                <div class="quick-win-card">
+                    <div class="quick-win-header">
+                        <div>
+                            <h3 class="quick-win-title">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Google My Business Optimalisatie
+                            </h3>
+                            <p>Verhoog lokale visibility en map pack rankings onmiddellijk</p>
+                        </div>
+                        <div class="quick-win-badges">
+                            <span class="badge badge-time">5-7 dagen</span>
+                            <span class="badge badge-impact">Hoge Impact</span>
+                            <span class="badge badge-cost">€150</span>
+                        </div>
+                    </div>
+
+                    <div class="implementation-steps">
+                        <h4>Implementatie Stappen</h4>
+                        <ol class="step-list">
+                            <li>GMB profiel compleet maken met alle bedrijfsgegevens, openingstijden, en contactinformatie</li>
+                            <li>Hoogwaardige foto's toevoegen: exterior, interior, team, workshops in actie (min. 20 foto's)</li>
+                            <li>Bedrijfsbeschrijving optimaliseren met lokale keywords: "kookworkshops Nijmegen", "bedrijfsuitje Arnhem"</li>
+                            <li>Service categorieën toevoegen: Catering, Event Planning, Cooking Classes, Team Building</li>
+                            <li>Posts schema implementeren: wekelijkse updates over workshops, events, menu's</li>
+                            <li>Review management systeem opzetten: automatische review requests na workshops</li>
+                        </ol>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="impact-metric">
+                            <span class="impact-number">+200%</span>
+                            <span class="impact-label">Local Search Visibility</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">250-400</span>
+                            <span class="impact-label">Extra Bezoekers/Maand</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">15-25</span>
+                            <span class="impact-label">Map Pack Appearances</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Win 2: Meta Tags Optimization -->
+                <div class="quick-win-card">
+                    <div class="quick-win-header">
+                        <div>
+                            <h3 class="quick-win-title">
+                                <i class="fas fa-tags"></i>
+                                Meta Tags & Title Optimalisatie
+                            </h3>
+                            <p>Verbeter click-through rates en search engine rankings</p>
+                        </div>
+                        <div class="quick-win-badges">
+                            <span class="badge badge-time">3-5 dagen</span>
+                            <span class="badge badge-impact">Hoge Impact</span>
+                            <span class="badge badge-cost">€300</span>
+                        </div>
+                    </div>
+
+                    <div class="implementation-steps">
+                        <h4>Implementatie Stappen</h4>
+                        <ol class="step-list">
+                            <li>Keyword research voor elke pagina: primaire en secundaire keywords identificeren</li>
+                            <li>Title tags optimaliseren: 55-60 karakters, keyword vooraan, merkidentiteit aan einde</li>
+                            <li>Meta descriptions herschrijven: 150-160 karakters, call-to-action, lokale keywords</li>
+                            <li>H1 tags op elke pagina: uniek, keyword-rich, beschrijvend</li>
+                            <li>Internal linking structure verbeteren: gerelateerde services en testimonials</li>
+                            <li>Schema markup implementeren: LocalBusiness, Service, Review schemas</li>
+                        </ol>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="impact-metric">
+                            <span class="impact-number">+15-25%</span>
+                            <span class="impact-label">Click-Through Rate</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">+5-8</span>
+                            <span class="impact-label">Ranking Posities</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">2-3</span>
+                            <span class="impact-label">Featured Snippets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Win 3: NAP Consistency -->
+                <div class="quick-win-card">
+                    <div class="quick-win-header">
+                        <div>
+                            <h3 class="quick-win-title">
+                                <i class="fas fa-address-card"></i>
+                                NAP Consistentie & Citations
+                            </h3>
+                            <p>Versterk lokale authority en trustworthiness</p>
+                        </div>
+                        <div class="quick-win-badges">
+                            <span class="badge badge-time">7-10 dagen</span>
+                            <span class="badge badge-impact">Medium Impact</span>
+                            <span class="badge badge-cost">€500</span>
+                        </div>
+                    </div>
+
+                    <div class="implementation-steps">
+                        <h4>Implementatie Stappen</h4>
+                        <ol class="step-list">
+                            <li>NAP audit: alle online vermeldingen controleren en inconsistenties identificeren</li>
+                            <li>Primaire citations creëren: Google My Business, Bing Places, Apple Maps</li>
+                            <li>Industrie-specifieke directories: hospitality, event planning, catering directories</li>
+                            <li>Lokale directories: Nijmegen.nl, Arnhem business directories, regionale sites</li>
+                            <li>Social media profielen optimaliseren: consistent NAP op LinkedIn, Facebook, Instagram</li>
+                            <li>Website footer en contact pagina: NAP consistent en gestructureerd</li>
+                        </ol>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="impact-metric">
+                            <span class="impact-number">+3-5</span>
+                            <span class="impact-label">Local Rankings</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">25-50</span>
+                            <span class="impact-label">Referral Traffic</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">+20%</span>
+                            <span class="impact-label">Trust Signals</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Win 4: Technical SEO Basics -->
+                <div class="quick-win-card">
+                    <div class="quick-win-header">
+                        <div>
+                            <h3 class="quick-win-title">
+                                <i class="fas fa-cogs"></i>
+                                Technical SEO Basics
+                            </h3>
+                            <p>Fix kritieke technische issues voor betere crawling</p>
+                        </div>
+                        <div class="quick-win-badges">
+                            <span class="badge badge-time">5-7 dagen</span>
+                            <span class="badge badge-impact">Medium Impact</span>
+                            <span class="badge badge-cost">€400</span>
+                        </div>
+                    </div>
+
+                    <div class="implementation-steps">
+                        <h4>Implementatie Stappen</h4>
+                        <ol class="step-list">
+                            <li>XML sitemap genereren en submitten aan Google Search Console</li>
+                            <li>Robots.txt optimaliseren: belangrijke pagina's niet blokkeren</li>
+                            <li>404 errors fixen: broken links identificeren en redirects implementeren</li>
+                            <li>Alt-text toevoegen aan alle afbeeldingen: descriptief en keyword-rich</li>
+                            <li>Page loading speed verbeteren: image compression, caching optimalisatie</li>
+                            <li>Mobile-friendliness controleren en verbeteren waar nodig</li>
+                        </ol>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="impact-metric">
+                            <span class="impact-number">+15%</span>
+                            <span class="impact-label">Crawl Efficiency</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">+10-20%</span>
+                            <span class="impact-label">Mobile Traffic</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">-25%</span>
+                            <span class="impact-label">Bounce Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Win 5: Content Quick Fixes -->
+                <div class="quick-win-card">
+                    <div class="quick-win-header">
+                        <div>
+                            <h3 class="quick-win-title">
+                                <i class="fas fa-edit"></i>
+                                Content Quick Fixes
+                            </h3>
+                            <p>Optimaliseer bestaande content voor betere performance</p>
+                        </div>
+                        <div class="quick-win-badges">
+                            <span class="badge badge-time">7-10 dagen</span>
+                            <span class="badge badge-impact">Medium Impact</span>
+                            <span class="badge badge-cost">€350</span>
+                        </div>
+                    </div>
+
+                    <div class="implementation-steps">
+                        <h4>Implementatie Stappen</h4>
+                        <ol class="step-list">
+                            <li>Homepage content herschrijven: focus op lokale keywords en unique selling points</li>
+                            <li>Service pagina's uitbreiden: gedetailleerde beschrijvingen, voordelen, testimonials</li>
+                            <li>Testimonials sectie toevoegen: klantreviews met lokale bedrijfsnamen</li>
+                            <li>FAQ pagina creëren: veel gestelde vragen over workshops, prijzen, locaties</li>
+                            <li>Call-to-actions verbeteren: duidelijke next steps op elke pagina</li>
+                            <li>Contact informatie prominent plaatsen: telefoon, email, adres zichtbaar</li>
+                        </ol>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="impact-metric">
+                            <span class="impact-number">+30%</span>
+                            <span class="impact-label">Time on Site</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">+25%</span>
+                            <span class="impact-label">Conversion Rate</span>
+                        </div>
+                        <div class="impact-metric">
+                            <span class="impact-number">+15%</span>
+                            <span class="impact-label">User Engagement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Checklist -->
+        <section id="implementation" class="section">
+            <div class="container">
+                <h2 class="section-title">Implementatie Checklist</h2>
+                
+                <div class="checklist">
+                    <h3>Week 1: Google My Business & Meta Tags</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="week1Progress"></div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>GMB profiel compleet invullen</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>20+ foto's uploaden naar GMB</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Title tags voor alle pagina's optimaliseren</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Meta descriptions herschrijven</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>H1 tags implementeren</span>
+                    </div>
+                </div>
+
+                <div class="checklist">
+                    <h3>Week 2: NAP & Technical SEO</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="week2Progress"></div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>NAP consistentie audit uitvoeren</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Citations creëren in 10+ directories</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>XML sitemap genereren en submitten</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>404 errors identificeren en fixen</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Alt-text toevoegen aan alle afbeeldingen</span>
+                    </div>
+                </div>
+
+                <div class="checklist">
+                    <h3>Week 3-4: Content Optimalisatie</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="week34Progress"></div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Homepage content herschrijven</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Service pagina's uitbreiden</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>FAQ pagina creëren</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Testimonials sectie toevoegen</span>
+                    </div>
+                    <div class="checklist-item">
+                        <div class="checklist-checkbox" onclick="toggleCheckbox(this)"></div>
+                        <span>Call-to-actions optimaliseren</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Metrics -->
+        <section id="tracking" class="section">
+            <div class="container">
+                <h2 class="section-title">Success Tracking</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Week 1 Metrics</h3>
+                        <ul>
+                            <li><strong>GMB views:</strong> Baseline → +150% target</li>
+                            <li><strong>Map searches:</strong> Track impressions</li>
+                            <li><strong>Website CTR:</strong> Monitor in GSC</li>
+                            <li><strong>Branded searches:</strong> Uptick verwacht</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Week 2 Metrics</h3>
+                        <ul>
+                            <li><strong>Local rankings:</strong> Track top 10 keywords</li>
+                            <li><strong>Citation count:</strong> Directory appearances</li>
+                            <li><strong>Site health:</strong> Technical errors resolved</li>
+                            <li><strong>Page speed:</strong> Mobile/desktop scores</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Month 1 Results</h3>
+                        <ul>
+                            <li><strong>Organic traffic:</strong> +60-75% growth target</li>
+                            <li><strong>Local traffic:</strong> +200-300% GMB driven</li>
+                            <li><strong>Conversion rate:</strong> +15-25% improvement</li>
+                            <li><strong>Average position:</strong> +3-5 ranking boost</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Tools & Monitoring</h3>
+                        <ul>
+                            <li><strong>Google Search Console:</strong> Rankings, CTR, impressions</li>
+                            <li><strong>Google Analytics:</strong> Traffic, conversions, behavior</li>
+                            <li><strong>GMB Insights:</strong> Views, clicks, calls, directions</li>
+                            <li><strong>Local rank tracker:</strong> Keyword position monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="recommendation-box" style="margin-top: var(--space-12);">
+                    <h3><i class="fas fa-rocket"></i> Start Nu met Quick Wins!</h3>
+                    <p>Deze Quick Wins vormen de foundation voor alle verdere SEO efforts. Met een investering van slechts <strong>€4.575</strong> over 30 dagen, kun je <strong>260-320% traffic growth</strong> realiseren en een solide basis leggen voor de medium- en langetermijn strategieën. Start vandaag nog met Google My Business optimalisatie voor onmiddellijke resultaten!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p>&copy; 2025 GoedUitje.nl Quick Wins Implementation Guide</p>
+                    <p>Deel van SEO & GEO Analysis</p>
+                </div>
+                <div class="footer-actions">
+                    <button class="btn-outline" onclick="printPage()">
+                        <i class="fas fa-print"></i> Print Checklist
+                    </button>
+                    <a href="../index.html" class="btn-primary">
+                        <i class="fas fa-arrow-left"></i> Terug naar Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleCheckbox(element) {
+            element.classList.toggle('checked');
+            updateProgress();
+        }
+
+        function updateProgress() {
+            // Week 1 progress
+            const week1Items = document.querySelectorAll('.checklist:nth-of-type(1) .checklist-checkbox');
+            const week1Checked = document.querySelectorAll('.checklist:nth-of-type(1) .checklist-checkbox.checked');
+            const week1Progress = (week1Checked.length / week1Items.length) * 100;
+            document.getElementById('week1Progress').style.width = week1Progress + '%';
+
+            // Week 2 progress
+            const week2Items = document.querySelectorAll('.checklist:nth-of-type(2) .checklist-checkbox');
+            const week2Checked = document.querySelectorAll('.checklist:nth-of-type(2) .checklist-checkbox.checked');
+            const week2Progress = (week2Checked.length / week2Items.length) * 100;
+            document.getElementById('week2Progress').style.width = week2Progress + '%';
+
+            // Week 3-4 progress
+            const week34Items = document.querySelectorAll('.checklist:nth-of-type(3) .checklist-checkbox');
+            const week34Checked = document.querySelectorAll('.checklist:nth-of-type(3) .checklist-checkbox.checked');
+            const week34Progress = (week34Checked.length / week34Items.length) * 100;
+            document.getElementById('week34Progress').style.width = week34Progress + '%';
+        }
+
+        function printPage() {
+            window.print();
+        }
+
+        // Smooth scrolling for navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                        
+                        // Update active nav link
+                        navLinks.forEach(nav => nav.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
