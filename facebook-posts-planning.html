@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Posts Planning - GoedUitje.nl</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .nav-links {
+            margin-bottom: 1rem;
+        }
+        
+        .nav-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            background: #e9ecef;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #495057;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+        
+        .nav-link:hover {
+            background: #dee2e6;
+        }
+        
+        .posts-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .posts-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .post-example {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-left: 4px solid #1877f2;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .post-date {
+            background: #1877f2;
+            color: white;
+            padding: 0.3rem 0.7rem;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        
+        .post-type {
+            background: #e8f5e8;
+            color: #28a745;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .post-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .post-meta {
+            background: #fff3cd;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #856404;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .quarter-section {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #1877f2;
+        }
+        
+        .quarter-section h3 {
+            color: #1565c0;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📋 Facebook Posts Planning</h1>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">🏠 Hoofdmenu</a>
+                <a href="facebook-content-strategy.html" class="nav-link">📘 Facebook Strategie</a>
+                <a href="instagram-content-tips.html" class="nav-link">📸 Instagram</a>
+                <a href="linkedin-content-tips.html" class="nav-link">💼 LinkedIn</a>
+            </div>
+            <p>De eerste 20 Facebook posts - direct te gebruiken</p>
+            <p><small>Geoptimaliseerd op basis van Instagram/LinkedIn success patterns</small></p>
+        </header>
+
+        <!-- Planning Overview -->
+        <section class="posts-section">
+            <h2>📅 5-Maanden Planning (Oktober 2025 - Februari 2026)</h2>
+            
+            <div class="content-grid">
+                <div class="quarter-section">
+                    <h3>Oktober-November 2025</h3>
+                    <p><strong>Focus:</strong> Community building & herfst workshops<br>
+                    <strong>Posts 1-8:</strong> Introductie + eerste workshops</p>
+                </div>
+                <div class="quarter-section">
+                    <h3>December 2025</h3>
+                    <p><strong>Focus:</strong> Feestdagen & team events<br>
+                    <strong>Posts 9-12:</strong> Jaar-eind activiteiten</p>
+                </div>
+                <div class="quarter-section">
+                    <h3>Januari-Februari 2026</h3>
+                    <p><strong>Focus:</strong> Nieuwe start & groei<br>
+                    <strong>Posts 13-20:</strong> Community groei + nieuwe workshops</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Posts 1-10 -->
+        <section class="posts-section">
+            <h2>📱 Posts 1-10: Community Building Phase</h2>
+
+            <!-- Post 1 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">2 oktober 2025</div>
+                    <div class="post-type">🎯 Introductie</div>
+                </div>
+                <div class="post-content">
+                    <strong>Welkom bij GoedUitje - waar koken en cultuur samenkomen! 🍽️</strong><br><br>
+                    
+                    Wij zijn het team achter de unieke kookworkshops in Nijmegen waar je niet alleen leert koken, maar ook andere culturen ontdekt.<br><br>
+                    
+                    Van Midden-Oosterse specialiteiten tot Aziatische geheimen - onze expert instructeurs (zoals Noura en Zinab) delen hun authentieke recepten én verhalen.<br><br>
+                    
+                    🎯 Perfect voor: teambuilding, vriendengroepen, families<br>
+                    📍 Locatie: Nijmegen<br>
+                    👥 Groepen: 6-12 personen<br><br>
+                    
+                    Reageer met 🍴 als je nieuwsgierig bent naar onze workshops!
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Community introductie + expert credibility (gebaseerd op LinkedIn success) | 
+                    📸 <strong>Visual:</strong> Team foto in keuken setting | 
+                    🎯 <strong>CTA:</strong> Soft engagement vraag
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">9 oktober 2025</div>
+                    <div class="post-type">🎓 Educational</div>
+                </div>
+                <div class="post-content">
+                    <strong>Wist je dat falafel oorspronkelijk uit Egypte komt? 🇪🇬</strong><br><br>
+                    
+                    Deze crispy ballen van liefde hebben een reis gemaakt door het hele Midden-Oosten, en elke regio heeft zijn eigen twist toegevoegd.<br><br>
+                    
+                    🔍 <strong>Egyptische versie:</strong> Gemaakt van tuinbonen (ful)<br>
+                    🔍 <strong>Libanese versie:</strong> Mix van kikkererwten en peterselie<br>
+                    🔍 <strong>Israëlische versie:</strong> Puur kikkererwten, extra knapperig<br><br>
+                    
+                    Volgende week in onze Midden-Oosterse workshop leer je alle drie de varianten maken! 🧑‍🍳<br><br>
+                    
+                    Welke versie klinkt het lekkerst voor jou? Reageer met 🇪🇬, 🇱🇧 of 🇮🇱!
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Cultural education (Instagram success pattern) | 
+                    📸 <strong>Visual:</strong> 3 verschillende falafel foto's | 
+                    🎯 <strong>CTA:</strong> Interactive engagement
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">16 oktober 2025</div>
+                    <div class="post-type">📅 Event</div>
+                </div>
+                <div class="post-content">
+                    <strong>🎉 Aankondiging: Kibbeh Workshop - Zondag 20 Oktober</strong><br><br>
+                    
+                    Noura neemt je mee in de kunst van het maken van perfecte kibbeh - die heerlijke Libanese gevulde bulgur balletjes die in onze Instagram video viral gingen! 📺<br><br>
+                    
+                    <strong>Wat leer je:</strong><br>
+                    ✅ De perfecte bulgur-to-vlees ratio<br>
+                    ✅ Traditionele kruidentechnieken<br>
+                    ✅ Vorm geven zoals een echte pro<br>
+                    ✅ 3 verschillende vullingen<br><br>
+                    
+                    📅 <strong>Wanneer:</strong> Zondag 20 oktober, 14:00-17:00<br>
+                    👥 <strong>Nog 4 plekken beschikbaar</strong><br>
+                    💶 <strong>Inclusief:</strong> Alle ingrediënten + je eigen creaties mee naar huis<br><br>
+                    
+                    Reageer met "KIBBEH" voor meer info! 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Event promotion + expert mention (LinkedIn pattern) | 
+                    📸 <strong>Visual:</strong> Kibbeh making proces in 3 stappen | 
+                    🎯 <strong>CTA:</strong> Clear action voor interesse
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">23 oktober 2025</div>
+                    <div class="post-type">🌟 Community</div>
+                </div>
+                <div class="post-content">
+                    <strong>Kijk eens wat het team van Rabobank afgelopen weekend heeft gemaakt! 👏</strong><br><br>
+                    
+                    8 collega's, 4 gerechten, 1 onvergetelijke middag. Van "ik kan niet koken" tot "wanneer is de volgende workshop?" in 3 uur tijd! 😄<br><br>
+                    
+                    <strong>Hun ervaring:</strong><br>
+                    💬 "Ik wist niet dat teambuilding zo lekker kon zijn!"<br>
+                    💬 "Zinab's verhalen maakten het extra speciaal"<br>
+                    💬 "Mijn kinderen waren onder de indruk van papa's hummus"<br><br>
+                    
+                    <strong>Ook interested in een workshop voor jouw team?</strong><br>
+                    Perfecte mix van samenwerken, leren en genieten! 👥<br><br>
+                    
+                    Tag jouw collega's die dit leuk zouden vinden! 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Social proof + testimonials (success pattern) | 
+                    📸 <strong>Visual:</strong> Groepsfoto + hun gemaakte gerechten | 
+                    🎯 <strong>CTA:</strong> Team workshop interesse
+                </div>
+            </div>
+
+            <!-- Post 5 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">30 oktober 2025</div>
+                    <div class="post-type">🎃 Seasonal</div>
+                </div>
+                <div class="post-content">
+                    <strong>Halloween met een twist: Oranje pompoen wordt Midden-Oosterse magie! 🎃</strong><br><br>
+                    
+                    Wist je dat pompoen in de Libanese keuken al eeuwenlang wordt gebruikt? Perfect voor deze tijd van het jaar! 🍂<br><br>
+                    
+                    <strong>3 Midden-Oosterse pompoen recepten die je moet proberen:</strong><br>
+                    🥣 <strong>Yakhnet Laqteen:</strong> Stoofpot met pompoen en vlees<br>
+                    🫓 <strong>Fatayer Laqteen:</strong> Pompoenvulling in deegzakjes<br>
+                    🍰 <strong>Muhallabia Laqteen:</strong> Pompoenpudding met rozenblaadjes<br><br>
+                    
+                    In onze November workshop gaan we deze herfst klassieker maken! 🧡<br><br>
+                    
+                    Wat is jouw favoriete manier om pompoen te gebruiken? 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Seasonal content + educational (Instagram pattern) | 
+                    📸 <strong>Visual:</strong> Oranje pompoenen + Middle Eastern spices | 
+                    🎯 <strong>CTA:</strong> Personal experience sharing
+                </div>
+            </div>
+
+            <!-- Post 6 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">6 november 2025</div>
+                    <div class="post-type">👨‍🍳 Expert</div>
+                </div>
+                <div class="post-content">
+                    <strong>Meet Amira: Onze expert in Marokkaanse keuken 👩‍🍳</strong><br><br>
+                    
+                    Amira groeide op in Casablanca waar haar oma haar de geheimen van de traditionele tagine leerde. Nu, 15 jaar later, deelt zij deze familietraditie met ons in Nijmegen! ❤️<br><br>
+                    
+                    <strong>Amira's specialiteiten:</strong><br>
+                    🍯 Authentieke Marokkaanse tagines<br>
+                    🫓 Zelfgemaakte broden (khubz)<br>
+                    🧄 Ras el hanout kruiden mixen<br>
+                    🍃 Mint tea ceremonie<br><br>
+                    
+                    <strong>"Koken is liefde delen,"</strong> zegt Amira. <strong>"Als je mijn food proeft, proef je mijn oma's liefde."</strong><br><br>
+                    
+                    Binnenkort kondigen we Amira's Marokkaanse workshop aan! 🇲🇦✨<br><br>
+                    
+                    Wat zou je graag willen leren maken in een Marokkaanse kookworkshop?
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Expert spotlight + personal story (LinkedIn success) | 
+                    📸 <strong>Visual:</strong> Portret van Amira + haar signature gerechten | 
+                    🎯 <strong>CTA:</strong> Workshop interesse peilen
+                </div>
+            </div>
+
+            <!-- Post 7 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">13 november 2025</div>
+                    <div class="post-type">🏢 B2B</div>
+                </div>
+                <div class="post-content">
+                    <strong>Bedrijfsuitje met verschil: Van boardroom naar keuken! 👔➡️👨‍🍳</strong><br><br>
+                    
+                    Afgelopen maand hebben we 4 verschillende teams verwelkomd voor hun teambuilding workshops. Het resultaat? Teams die beter samenwerken EN heerlijk kunnen koken! 🤝<br><br>
+                    
+                    <strong>Waarom onze workshops perfect zijn voor teams:</strong><br>
+                    ✅ Samenwerking zonder druk - iedereen kan meedoen<br>
+                    ✅ Cultureel bewustzijn - perfect voor diverse teams<br>
+                    ✅ Praktische skills - iets nieuws leren samen<br>
+                    ✅ Ontspanning - even weg van de werkstress<br><br>
+                    
+                    <strong>Geschikt voor:</strong> 8-15 collega's, alle kooklevels welkom!<br><br>
+                    
+                    Planning een teamuitje voor 2026? We hebben nog enkele data beschikbaar! 📅<br><br>
+                    
+                    Stuur een DM voor meer informatie! 💬
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> B2B focus + concrete benefits (LinkedIn approach) | 
+                    📸 <strong>Visual:</strong> Business team cooking together, professional maar relaxed | 
+                    🎯 <strong>CTA:</strong> Direct business inquiry
+                </div>
+            </div>
+
+            <!-- Post 8 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">20 november 2025</div>
+                    <div class="post-type">🎓 Educational</div>
+                </div>
+                <div class="post-content">
+                    <strong>De wetenschap achter perfect baklava: Waarom laagjes zo belangrijk zijn! 🥐</strong><br><br>
+                    
+                    Baklava lijkt simpel - phyllo deeg, noten, siroop - maar de perfecte baklava is een kunstwerk van precisie! 🎨<br><br>
+                    
+                    <strong>Het geheim zit in de laagjes:</strong><br>
+                    🧈 <strong>Elke laag boter:</strong> Zorgt voor knapperigheid<br>
+                    📏 <strong>Dunne, gelijke lagen:</strong> Gelijkmatige textuur<br>
+                    🔪 <strong>Snijden VOOR bakken:</strong> Voorkomt breken<br>
+                    🍯 <strong>Koude siroop op warm gebak:</strong> Perfecte absorptie<br><br>
+                    
+                    <strong>Fun fact:</strong> Traditionele baklava heeft minstens 40 laagjes phyllo! Dat is vakmanschap! 👨‍🍳<br><br>
+                    
+                    In december organiseren we een Turkse dessert workshop - baklava natuurlijk included! 🍰<br><br>
+                    
+                    Wat is jouw favoriete Middle Eastern dessert? 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Educational + science approach (Instagram success) | 
+                    📸 <strong>Visual:</strong> Baklava layers proces - step by step foto's | 
+                    🎯 <strong>CTA:</strong> Dessert preferences + workshop hint
+                </div>
+            </div>
+
+            <!-- Post 9 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">27 november 2025</div>
+                    <div class="post-type">🎄 Holiday</div>
+                </div>
+                <div class="post-content">
+                    <strong>Kerstdinner met een twist: Middle Eastern Holiday Feast! 🎄✨</strong><br><br>
+                    
+                    Wie zegt dat kerst alleen maar gehakt en aardappelen moet zijn? Dit jaar brengen we oosterse warmte naar de Nederlandse kerst! 🕯️<br><br>
+                    
+                    <strong>Ons Kerst Fusion Menu:</strong><br>
+                    🥗 <strong>Fattoush:</strong> Kleurrijke salade als starter<br>
+                    🍗 <strong>Freekeh gevulde kip:</strong> Traditioneel maar anders<br>
+                    🍚 <strong>Saffron rijst:</strong> Golden als kerstversiering<br>
+                    🍰 <strong>Kanafeh:</strong> Zoete afsluiting met rozenblaadjes<br><br>
+                    
+                    <strong>Special Kerst Workshop - 21 December:</strong><br>
+                    Perfect voor families die iets nieuws willen proberen! 👨‍👩‍👧‍👦<br><br>
+                    
+                    Nog 6 plekken beschikbaar voor deze unieke kerst ervaring! 🎁<br><br>
+                    
+                    Zou jij dit aan je kersttafel serveren? Reageer met 🎄!
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Holiday relevance + fusion concept | 
+                    📸 <strong>Visual:</strong> Elegant Middle Eastern dishes met kerstdecor | 
+                    🎯 <strong>CTA:</strong> Christmas workshop interest
+                </div>
+            </div>
+
+            <!-- Post 10 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">4 december 2025</div>
+                    <div class="post-type">🌟 Community</div>
+                </div>
+                <div class="post-content">
+                    <strong>2 maanden GoedUitje Facebook - wat een reis! 🚀</strong><br><br>
+                    
+                    Van onze eerste post tot nu hebben we een geweldige community opgebouwd van food lovers in Nijmegen! 💜<br><br>
+                    
+                    <strong>Onze highlights:</strong><br>
+                    👥 <strong>6 workshops:</strong> 48 deelnemers, ontelbare glimlachen<br>
+                    🏢 <strong>3 bedrijfsteams:</strong> Succesvolle teambuilding ervaringen<br>
+                    🌍 <strong>4 culturen:</strong> Libanees, Marokkaans, Turks, Egyptisch<br>
+                    ❤️ <strong>Jullie feedback:</strong> Gemiddeld 4.9/5 sterren!<br><br>
+                    
+                    <strong>Maar het mooiste zijn jullie verhalen:</strong><br>
+                    💬 "Mijn kinderen vragen nu elke week om hummus!"<br>
+                    💬 "We maken nu elke vrijdag samen falafel thuis"<br>
+                    💬 "Ons team is echt hechter geworden"<br><br>
+                    
+                    <strong>DANK JE WEL</strong> voor het vertrouwen en de liefde! 🙏<br><br>
+                    
+                    2026 wordt nog mooier - blijf ons volgen! ✨
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Community celebration + social proof | 
+                    📸 <strong>Visual:</strong> Collage van workshop momenten en happy faces | 
+                    🎯 <strong>CTA:</strong> Community appreciation + future excitement
+                </div>
+            </div>
+        </section>
+
+        <!-- Posts 11-20 -->
+        <section class="posts-section">
+            <h2>📱 Posts 11-20: Growth & Engagement Phase</h2>
+
+            <!-- Post 11 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">11 december 2025</div>
+                    <div class="post-type">🎁 Gift</div>
+                </div>
+                <div class="post-content">
+                    <strong>Het perfecte kerstcadeau voor food lovers: Workshop Giftcard! 🎁</strong><br><br>
+                    
+                    Nog geen idee wat je moet geven aan die persoon die alles al heeft? Geef een ervaring die smaakt naar meer! 😋<br><br>
+                    
+                    <strong>Onze Gift Cards zijn perfect voor:</strong><br>
+                    👩‍🍳 <strong>De beginnende kok:</strong> Leren van echte experts<br>
+                    🌍 <strong>De cultuurliefhebber:</strong> Authentieke ervaringen<br>
+                    👥 <strong>Koppels & vrienden:</strong> Quality time samen<br>
+                    🏢 <strong>Collega's:</strong> Unieke teambuilding<br><br>
+                    
+                    <strong>Geldig:</strong> 12 maanden<br>
+                    <strong>Flexibel:</strong> Alle workshops beschikbaar<br>
+                    <strong>Persoonlijk:</strong> Mooie presentatie inclusief<br><br>
+                    
+                    Stuur een DM voor gift card info! Perfect last-minute cadeau! 💝<br><br>
+                    
+                    Tag iemand die dit cadeau zou waarderen! 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Holiday sales + gift positioning | 
+                    📸 <strong>Visual:</strong> Elegant gift card design + happy recipients | 
+                    🎯 <strong>CTA:</strong> Gift card sales + tagging
+                </div>
+            </div>
+
+            <!-- Post 12 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">18 december 2025</div>
+                    <div class="post-type">🎄 Recipe</div>
+                </div>
+                <div class="post-content">
+                    <strong>Kerst DIY: Maak thuis onze signature Pomegranate Mint Lemonade! 🍃</strong><br><br>
+                    
+                    Deze refreshing drink is altijd een hit tijdens onze workshops - en super makkelijk thuis te maken! 🏠<br><br>
+                    
+                    <strong>Ingrediënten (4 personen):</strong><br>
+                    🍋 4 citroenen (vers geperst)<br>
+                    🍃 Handvol verse munt<br>
+                    🔴 1/2 cup granaatappelpitjes<br>
+                    🍯 2 el honing<br>
+                    💧 1 liter bruiswater<br>
+                    🧊 Veel ijs!<br><br>
+                    
+                    <strong>Doe dit:</strong><br>
+                    1. Munt + honing fijnstampen<br>
+                    2. Citroen + granaatappel erbij<br>
+                    3. Bruiswater + ijs toevoegen<br>
+                    4. Genieten! 🥤<br><br>
+                    
+                    <strong>Pro tip van Noura:</strong> Vries wat granaatappelpitjes in ijsblokjes - looks amazing! ✨<br><br>
+                    
+                    Ga je dit proberen? Laat een foto zien! 📸👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Value-added content + DIY engagement | 
+                    📸 <strong>Visual:</strong> Beautiful drink photos + step by step | 
+                    🎯 <strong>CTA:</strong> User-generated content
+                </div>
+            </div>
+
+            <!-- Post 13 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">8 januari 2026</div>
+                    <div class="post-type">✨ New Year</div>
+                </div>
+                <div class="post-content">
+                    <strong>2026: Het jaar van nieuwe smaken en culturen! ✨</strong><br><br>
+                    
+                    Iedereen heeft goede voornemens - wij hebben heerlijke plannen! Dit jaar brengen we nog meer authentieke keukens naar Nijmegen! 🌍<br><br>
+                    
+                    <strong>Nieuwe cuisines in 2026:</strong><br>
+                    🇮🇳 <strong>Indiase curry's</strong> - Met Priya als expert<br>
+                    🇹🇭 <strong>Thai street food</strong> - Authentic met Siriporn<br>
+                    🇰🇷 <strong>Korean BBQ & Kimchi</strong> - Modern twist<br>
+                    🇪🇹 <strong>Ethiopische injera</strong> - Community dining style<br><br>
+                    
+                    <strong>Plus deze maand:</strong><br>
+                    📅 <strong>19 Jan:</strong> Healthy start workshop (detox Middle Eastern style)<br>
+                    📅 <strong>26 Jan:</strong> Comfort food fusion workshop<br><br>
+                    
+                    <strong>Good food = good year!</strong> Welke cuisine wil jij als eerste proberen? 🤔<br><br>
+                    
+                    Reageer met de vlag van jouw keuze! 🇮🇳🇹🇭🇰🇷🇪🇹
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> New Year momentum + expansion preview | 
+                    📸 <strong>Visual:</strong> Colorful dishes from different cultures + flags | 
+                    🎯 <strong>CTA:</strong> Interactive flag responses
+                </div>
+            </div>
+
+            <!-- Post 14 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">15 januari 2026</div>
+                    <div class="post-type">💪 Health</div>
+                </div>
+                <div class="post-content">
+                    <strong>Januari detox? Wij doen het op een lekkere manier! 🥗</strong><br><br>
+                    
+                    Geen saaie sla en sad smoothies - Middle Eastern keuken heeft de lekkerste healthy opties! 💚<br><br>
+                    
+                    <strong>Onze gezonde favorites:</strong><br>
+                    🌿 <strong>Tabouleh:</strong> Peterselie power salad<br>
+                    🫘 <strong>Ful medames:</strong> Protein-packed bonen<br>
+                    🥒 <strong>Fattoush:</strong> Crunchy regenboog salade<br>
+                    🐟 <strong>Grilled fish Persian style:</strong> Omega-3 boost<br>
+                    🥤 <strong>Mint tea:</strong> Natural detox drink<br><br>
+                    
+                    <strong>Why it works:</strong><br>
+                    ✅ Vol groenten en verse kruiden<br>
+                    ✅ Gezonde vetten (olijfolie, noten)<br>
+                    ✅ Plant-based proteïnes<br>
+                    ✅ Natuurlijke detox ingrediënten<br><br>
+                    
+                    <strong>Healthy Start Workshop - 19 januari:</strong><br>
+                    Leer 5 gezonde Middle Eastern gerechten! 🌱<br><br>
+                    
+                    Wat is jouw favoriete healthy gerecht? 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> January health trends + Middle Eastern healthy options | 
+                    📸 <strong>Visual:</strong> Colorful, fresh, healthy Middle Eastern dishes | 
+                    🎯 <strong>CTA:</strong> Workshop promotion + healthy food discussion
+                </div>
+            </div>
+
+            <!-- Post 15 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">22 januari 2026</div>
+                    <div class="post-type">🏆 Success</div>
+                </div>
+                <div class="post-content">
+                    <strong>Success story: Van "ik verbrand water" tot homemade hummus queen! 👑</strong><br><br>
+                    
+                    Meet Sarah - ze kwam in oktober naar haar eerste workshop met de woorden: "Ik kan letterlijk alleen pasta koken..." 😅<br><br>
+                    
+                    <strong>4 maanden later:</strong><br>
+                    ✅ Heeft alle 6 workshops gevolgd<br>
+                    ✅ Maakt wekelijks Middle Eastern gerechten<br>
+                    ✅ Haar hummus is nu familie-beroemd<br>
+                    ✅ Nodigt vrienden uit voor haar "Lebanese nights"<br><br>
+                    
+                    <strong>Sarah's woorden:</strong><br>
+                    💬 "GoedUitje heeft mijn leven veranderd. Koken was altijd stress, nu is het mijn happy place. En de verhalen van de instructeurs maken elk gerecht speciaal. Ik voel me verbonden met culturen die ik nooit kende!"<br><br>
+                    
+                    <strong>Dit is waarom wij doen wat we doen! ❤️</strong><br><br>
+                    
+                    Ben jij klaar voor jouw eigen food transformation? 🌟<br><br>
+                    
+                    Tag iemand die dit ook zou kunnen zijn! 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Customer success story + transformation narrative | 
+                    📸 <strong>Visual:</strong> Before/after style - simple pasta vs elaborate Middle Eastern spread | 
+                    🎯 <strong>CTA:</strong> Inspiration + tagging potential customers
+                </div>
+            </div>
+
+            <!-- Post 16 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">29 januari 2026</div>
+                    <div class="post-type">👨‍🍳 Behind Scenes</div>
+                </div>
+                <div class="post-content">
+                    <strong>Behind the scenes: Hoe we onze workshops voorbereiden! 🎬</strong><br><br>
+                    
+                    Jullie zien de magische 3 uur workshop, maar er gaat veel meer vooraf! Kijk eens mee achter de schermen... 👀<br><br>
+                    
+                    <strong>1 dag voor workshop:</strong><br>
+                    🛒 <strong>07:00:</strong> Verse ingrediënten halen bij onze trusted suppliers<br>
+                    🧄 <strong>09:00:</strong> Kruiden malen en spice blends maken<br>
+                    🥖 <strong>11:00:</strong> Verse broden bakken voor de workshop<br><br>
+                    
+                    <strong>Workshop dag:</strong><br>
+                    🔥 <strong>11:00:</strong> Keuken setup + tools controleren<br>
+                    📝 <strong>12:00:</strong> Instructeurs briefing + recipe final check<br>
+                    🧽 <strong>13:00:</strong> Laatste cleaning + welkom setup<br><br>
+                    
+                    <strong>Het resultaat:</strong> Jullie kunnen direct beginnen met leren en genieten! ✨<br><br>
+                    
+                    Quality is ons ding - geen shortcuts! 💯<br><br>
+                    
+                    Waardeer je dit niveau van voorbereiding? Laat het ons weten! 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Behind-scenes transparency + quality emphasis | 
+                    📸 <strong>Visual:</strong> Time-lapse style photos van preparation process | 
+                    🎯 <strong>CTA:</strong> Appreciation for quality effort
+                </div>
+            </div>
+
+            <!-- Post 17 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">5 februari 2026</div>
+                    <div class="post-type">💕 Valentine</div>
+                </div>
+                <div class="post-content">
+                    <strong>Valentine's Day Middle Eastern style: Liefde gaat door de maag! 💕</strong><br><br>
+                    
+                    Vergeet standaard restaurant dinners - dit jaar maak je samen iets onvergetelijks! 👨‍❤️‍👩<br><br>
+                    
+                    <strong>Valentine's Couples Workshop - 14 februari:</strong><br>
+                    🌹 <strong>Menu voor twee:</strong><br>
+                    • Romantic mezze platter (samen opbouwen)<br>
+                    • Honey-glazed lamb (perfect sharing dish)<br>
+                    • Rose & pistachio baklava (sweet ending)<br>
+                    • Pomegranate champagne mocktail<br><br>
+                    
+                    <strong>Romantic touches:</strong><br>
+                    🕯️ Kaarslicht koken<br>
+                    🌹 Rose petals in gerechten<br>
+                    💝 Take-home dessert surprise<br>
+                    📸 Couple foto met jullie creatie<br><br>
+                    
+                    <strong>Limited:</strong> Slechts 6 koppels - intimate setting! 💫<br><br>
+                    
+                    Perfect voor: nieuwe koppels, jaren samen, verlovingsverrassing... 💍<br><br>
+                    
+                    Tag je Valentine! Durven jullie samen te koken? 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Valentine's positioning + couples experience | 
+                    📸 <strong>Visual:</strong> Romantic food styling + couple cooking together | 
+                    🎯 <strong>CTA:</strong> Couple tagging + romance appeal
+                </div>
+            </div>
+
+            <!-- Post 18 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">12 februari 2026</div>
+                    <div class="post-type">🌍 Cultural</div>
+                </div>
+                <div class="post-content">
+                    <strong>Ramadan preparation: De kunst van Iftar maaltijden! 🌙</strong><br><br>
+                    
+                    Over een maand begint Ramadan - tijd om te leren over deze bijzondere maaltijd tradities! 🕌<br><br>
+                    
+                    <strong>Wat is Iftar?</strong><br>
+                    🌅 Het breken van de vasten bij zonsondergang<br>
+                    👥 Samen eten met familie en vrienden<br>
+                    🤲 Dankbaarheid en community vieren<br>
+                    🍽️ Specifieke gerechten met betekenis<br><br>
+                    
+                    <strong>Traditionele Iftar gerechten:</strong><br>
+                    🥤 <strong>Jallab:</strong> Carob siroop drink<br>
+                    🥣 <strong>Shorbet ads:</strong> Linzen soep<br>
+                    🥟 <strong>Sambousek:</strong> Gevulde hapjes<br>
+                    🍯 <strong>Qatayef:</strong> Ramadan pancakes<br><br>
+                    
+                    <strong>Cultural Respect Workshop - 5 maart:</strong><br>
+                    Leer over tradities + maak authentieke Iftar gerechten! 🤝<br><br>
+                    
+                    Open voor iedereen - leren over andere culturen verbindt ons! ✨<br><br>
+                    
+                    Welke culturele tradities zou je graag beter begrijpen? 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Cultural education + inclusivity | 
+                    📸 <strong>Visual:</strong> Beautiful Iftar spread + cultural respect imagery | 
+                    🎯 <strong>CTA:</strong> Cultural learning interest
+                </div>
+            </div>
+
+            <!-- Post 19 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">19 februari 2026</div>
+                    <div class="post-type">📊 Community</div>
+                </div>
+                <div class="post-content">
+                    <strong>500 followers milestone! Onze GoedUitje familie groeit! 🎉</strong><br><br>
+                    
+                    Van 0 naar 500 food lovers in 5 maanden - dit hadden we niet durven dromen! 🚀<br><br>
+                    
+                    <strong>Samen hebben we bereikt:</strong><br>
+                    👥 <strong>500+ community members</strong><br>
+                    🏆 <strong>20 workshops gegeven</strong><br>
+                    🌍 <strong>6 culturen ontdekt</strong><br>
+                    😊 <strong>160 happy participants</strong><br>
+                    ⭐ <strong>4.9/5 average rating</strong><br><br>
+                    
+                    <strong>Maar het mooiste:</strong><br>
+                    💬 "Mijn kinderen vragen nu naar Syrische gerechten"<br>
+                    💬 "Onze teamcommunicatie is veel beter geworden"<br>
+                    💬 "Ik durf nu nieuwe dingen te proberen"<br>
+                    💬 "Koken is van corvee naar hobby geworden"<br><br>
+                    
+                    <strong>CELEBRATION WORKSHOP - 26 februari:</strong><br>
+                    🎊 Extra groot, extra lekker, extra fun!<br>
+                    Special pricing voor onze loyal followers! 💖<br><br>
+                    
+                    Deel jouw GoedUitje moment in de comments! 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Milestone celebration + community appreciation | 
+                    📸 <strong>Visual:</strong> Collage van all workshops + happy faces from 5 months | 
+                    🎯 <strong>CTA:</strong> Community story sharing
+                </div>
+            </div>
+
+            <!-- Post 20 -->
+            <div class="post-example">
+                <div class="post-header">
+                    <div class="post-date">26 februari 2026</div>
+                    <div class="post-type">🔮 Future</div>
+                </div>
+                <div class="post-content">
+                    <strong>Coming soon: GoedUitje 2.0 - Nog meer culturen, nog meer mogelijkheden! 🔮</strong><br><br>
+                    
+                    Na 20 successful Facebook posts en jullie geweldige feedback hebben we grote plannen! ✨<br><br>
+                    
+                    <strong>In ontwikkeling voor 2026:</strong><br>
+                    🏠 <strong>At-home workshops:</strong> Wij komen bij jou langs!<br>
+                    📦 <strong>GoedUitje meal kits:</strong> Onze workshops in een box<br>
+                    🎓 <strong>Kids workshops:</strong> Cultural cooking voor children<br>
+                    🏢 <strong>Corporate programs:</strong> Maandelijkse team experiences<br>
+                    📱 <strong>Digital recipes:</strong> Video tutorials van onze experts<br><br>
+                    
+                    <strong>Jullie input gewenst!</strong><br>
+                    Wat zou jullie het meest interesseren? We bouwen GoedUitje samen! 🤝<br><br>
+                    
+                    <strong>En tot die tijd:</strong><br>
+                    Blijf ons volgen voor meer workshops, tips, en culturele food adventures! 🌍<br><br>
+                    
+                    <strong>Dank je wel voor deze geweldige reis - en we zijn net begonnen! 🚀</strong><br><br>
+                    
+                    Welke nieuwe feature zou jij als eerste willen proberen? 👇
+                </div>
+                <div class="post-meta">
+                    💡 <strong>Strategie:</strong> Future vision + community input request | 
+                    📸 <strong>Visual:</strong> Exciting future concepts mockup + growth trajectory | 
+                    🎯 <strong>CTA:</strong> Feature preference + continued engagement
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 2rem; padding: 1rem; color: #666; background: white; border-radius: 8px;">
+            <h3 style="color: #1877f2; margin-bottom: 0.5rem;">🎯 Ready-to-Use Facebook Strategy</h3>
+            <small>20 posts geoptimaliseerd op basis van Instagram/LinkedIn success patterns<br>
+            Inclusief visual guidelines, posting timing, en engagement strategies</small>
+        </footer>
+    </div>
+</body>
+</html>
