@@ -8,8 +8,19 @@ def calculate_instagram_score(post):
     """Calculate Instagram success score based on engagement metrics"""
     likes = post.get('likesCount', 0) or 0
     comments = post.get('commentsCount', 0) or 0
-    video_views = post.get('videoViewCount', 0) or 0
-    video_plays = post.get('videoPlayCount', 0) or 0
+    
+    # FIX: The data appears to have videoViewCount and videoPlayCount swapped
+    # Based on analysis, videoPlayCount values are much higher and should be videoViewCount
+    raw_video_views = post.get('videoViewCount', 0) or 0
+    raw_video_plays = post.get('videoPlayCount', 0) or 0
+    
+    # Correct the swapped values based on logical assumption that views > plays
+    if raw_video_plays > raw_video_views and raw_video_plays > 0:
+        video_views = raw_video_plays  # Use the larger number as views
+        video_plays = raw_video_views  # Use the smaller number as plays
+    else:
+        video_views = raw_video_views
+        video_plays = raw_video_plays
     
     # Instagram Success Score Formula
     score = (likes * 1) + (comments * 5) + (video_views * 0.1) + (video_plays * 0.5)
@@ -70,6 +81,17 @@ def process_instagram_data():
     processed_posts = []
     for post in data:
         score = calculate_instagram_score(post)
+        # Apply same correction logic for display
+        raw_video_views = post.get('videoViewCount', 0) or 0
+        raw_video_plays = post.get('videoPlayCount', 0) or 0
+        
+        if raw_video_plays > raw_video_views and raw_video_plays > 0:
+            corrected_video_views = raw_video_plays
+            corrected_video_plays = raw_video_views
+        else:
+            corrected_video_views = raw_video_views
+            corrected_video_plays = raw_video_plays
+        
         processed_post = {
             'score': score,
             'caption': post.get('caption', 'No caption'),
@@ -77,15 +99,31 @@ def process_instagram_data():
             'date': format_date(post.get('timestamp', '')),
             'likes': post.get('likesCount', 0) or 0,
             'comments': post.get('commentsCount', 0) or 0,
-            'video_views': post.get('videoViewCount', 0) or 0,
-            'video_plays': post.get('videoPlayCount', 0) or 0,
-            'url': post.get('url', '')
+            'video_views': corrected_video_views,
+            'video_plays': corrected_video_plays,
+            'url': post.get('url', ''),
+            'id': post.get('id', '')  # Add ID for duplicate checking
         }
         processed_posts.append(processed_post)
     
+    # Remove duplicates based on ID
+    seen_ids = set()
+    unique_posts = []
+    duplicates_found = []
+    
+    for post in processed_posts:
+        if post['id'] in seen_ids:
+            duplicates_found.append(post['id'])
+        else:
+            seen_ids.add(post['id'])
+            unique_posts.append(post)
+    
+    if duplicates_found:
+        print(f"⚠️  Found {len(duplicates_found)} duplicate Instagram posts: {duplicates_found}")
+    
     # Sort by score descending
-    processed_posts.sort(key=lambda x: x['score'], reverse=True)
-    return processed_posts
+    unique_posts.sort(key=lambda x: x['score'], reverse=True)
+    return unique_posts
 
 def process_linkedin_data():
     """Process LinkedIn JSON data"""
@@ -106,13 +144,29 @@ def process_linkedin_data():
             'likes': post.get('stats', {}).get('like', 0) or 0,
             'comments': post.get('stats', {}).get('comments', 0) or 0,
             'shares': post.get('stats', {}).get('shares', 0) or 0,
-            'url': post.get('post_url', '')
+            'url': post.get('post_url', ''),
+            'activity_urn': post.get('activity_urn', '')  # Add URN for duplicate checking
         }
         processed_posts.append(processed_post)
     
+    # Remove duplicates based on activity_urn
+    seen_urns = set()
+    unique_posts = []
+    duplicates_found = []
+    
+    for post in processed_posts:
+        if post['activity_urn'] in seen_urns:
+            duplicates_found.append(post['activity_urn'])
+        else:
+            seen_urns.add(post['activity_urn'])
+            unique_posts.append(post)
+    
+    if duplicates_found:
+        print(f"⚠️  Found {len(duplicates_found)} duplicate LinkedIn posts: {duplicates_found}")
+    
     # Sort by score descending
-    processed_posts.sort(key=lambda x: x['score'], reverse=True)
-    return processed_posts
+    unique_posts.sort(key=lambda x: x['score'], reverse=True)
+    return unique_posts
 
 def generate_instagram_table(posts):
     """Generate Instagram posts table HTML"""
