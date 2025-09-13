@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* React Big Calendar styles */
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+/* Custom calendar styling */
+.rbc-calendar {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.rbc-header {
+  background: #f8f9fa;
+  font-weight: 600;
+  padding: 1rem;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.rbc-month-view {
+  border: none;
+}
+
+.rbc-date-cell {
+  padding: 0.5rem;
+  border-right: 1px solid #e9ecef;
+}
+
+.rbc-day-bg {
+  background: white;
+}
+
+.rbc-today {
+  background-color: #fff3cd !important;
+}
+
+.rbc-off-range-bg {
+  background-color: #f8f9fa !important;
+}
+
+/* Event styling based on platform */
+.rbc-event {
+  border-radius: 6px;
+  border: none;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rbc-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.rbc-event.instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  color: white;
+}
+
+.rbc-event.linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+  color: white;
+}
+
+.rbc-event.facebook {
+  background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
+  color: white;
+}
+
+/* Score indicators */
+.score-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.score-excellent {
+  background-color: #28a745;
+}
+
+.score-good {
+  background-color: #17a2b8;
+}
+
+.score-average {
+  background-color: #ffc107;
+}
+
+.score-poor {
+  background-color: #dc3545;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .rbc-calendar {
+    font-size: 12px;
+  }
+
+  .rbc-header {
+    padding: 0.5rem;
+  }
+
+  .rbc-event {
+    font-size: 10px;
+    padding: 1px 4px;
+  }
+}
+
+/* Methodology section styling */
+.methodology {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.methodology h3 {
+  color: #856404;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.methodology p, .methodology ul {
+  color: #856404;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.methodology ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.methodology li {
+  margin-bottom: 0.3rem;
+}
+
+/* Performance prediction indicators */
+.prediction-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.prediction-high {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.prediction-medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.prediction-low {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Raw data section */
+.raw-data-section {
+  background: #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.raw-data-section pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Navigation styling */
+.platform-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.platform-nav button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.platform-nav button.active {
+  border-color: #007bff;
+  background-color: #007bff;
+  color: white;
+}
+
+.platform-nav button:hover {
+  background-color: #f8f9fa;
+}

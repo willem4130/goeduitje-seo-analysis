@@ -369,6 +369,67 @@
                 </ul>
             </section>
             
+            <!-- AI Content Calendar - NEW FEATURE -->
+            <section class="analysis-section" style="border: 3px solid #28a745; background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%); margin-bottom: 2rem;">
+                <div class="section-header" style="border-bottom-color: #28a745;">
+                    <div class="section-icon">🗓️</div>
+                    <h2 class="section-title" style="color: #155724;">🚀 NEW: AI Content Calendar</h2>
+                </div>
+
+                <div style="margin-bottom: 1rem; padding: 1rem; background: #d4edda; border-radius: 8px; border-left: 4px solid #28a745;">
+                    <h3 style="color: #155724; margin-bottom: 0.5rem; font-size: 1.1rem;">🤖 Drag & Drop Content Planning with Performance Prediction</h3>
+                    <p style="color: #155724; font-size: 0.95rem; line-height: 1.5; margin: 0;">
+                        Visual calendar interface with AI-powered performance predictions based on your real Instagram & LinkedIn data.
+                        Drag posts to different dates and see predicted success scores update in real-time!
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 1rem;">
+                    <h4 style="color: #2c3e50; margin-bottom: 0.5rem; font-size: 1rem;">📊 Key Features:</h4>
+                    <ul style="margin-left: 1.5rem; color: #495057; font-size: 0.9rem; line-height: 1.4;">
+                        <li><strong>Real Performance Prediction:</strong> Uses your historical Instagram/LinkedIn data</li>
+                        <li><strong>Interactive Scheduling:</strong> Drag & drop posts with mobile support</li>
+                        <li><strong>Platform Intelligence:</strong> Optimal timing for Instagram, LinkedIn, Facebook</li>
+                        <li><strong>Transparent Methodology:</strong> Full access to scoring calculations and raw data</li>
+                        <li><strong>Live Updates:</strong> Predictions recalculate when you reschedule content</li>
+                    </ul>
+                </div>
+
+                <div style="background: #fff3cd; border-radius: 6px; padding: 1rem; margin-bottom: 1rem; border-left: 4px solid #ffc107;">
+                    <h4 style="color: #856404; margin-bottom: 0.5rem; font-size: 0.95rem;">🧮 Scoring Algorithms (Real Calculations):</h4>
+                    <div style="font-family: 'Monaco', 'Menlo', monospace; font-size: 0.8rem; color: #856404;">
+                        <strong>Instagram:</strong> (Likes × 1) + (Comments × 5) + (Video Views × 0.1) + (Video Plays × 0.5)<br>
+                        <strong>LinkedIn:</strong> (Likes × 2) + (Total Reactions × 2) + (Comments × 10) + (Shares × 15)
+                    </div>
+                </div>
+
+                <div style="background: #e3f2fd; border-radius: 6px; padding: 1rem; margin-bottom: 1rem; border-left: 4px solid #2196f3;">
+                    <h4 style="color: #1976d2; margin-bottom: 0.5rem; font-size: 0.95rem;">💾 Data Sources:</h4>
+                    <ul style="margin-left: 1.5rem; color: #1976d2; font-size: 0.85rem; line-height: 1.3;">
+                        <li><code>dataset_instagram-scraper_2025-09-04_13-39-02-289.json</code> (~200+ posts)</li>
+                        <li><code>dataset_linkedin-company-posts_2025-09-04_13-39-39-919.json</code> (~150+ posts)</li>
+                        <li>Includes: likes, comments, video metrics, shares, timestamps, full content</li>
+                        <li>Quality: Duplicate detection, data validation, metric correction logic</li>
+                    </ul>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem;">
+                    <a href="content-calendar/README.md" class="file-link" style="background: #28a745; color: white; text-align: center; font-weight: 600; border: none;">
+                        📖 Setup Instructions
+                    </a>
+                    <button onclick="navigator.clipboard.writeText('./content-calendar/start-backend.sh && ./content-calendar/start-frontend.sh'); alert('Commands copied! Run in terminal to start.');"
+                            style="padding: 0.5rem 0.75rem; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 0.9rem;">
+                        🚀 Copy Start Commands
+                    </button>
+                </div>
+
+                <div style="padding: 0.75rem; background: rgba(255,255,255,0.7); border-radius: 6px; border: 1px solid #dee2e6;">
+                    <p style="color: #495057; font-size: 0.85rem; margin: 0; text-align: center;">
+                        <strong>🎯 Result:</strong> Visual content calendar at <code>http://localhost:3000</code> with real performance insights
+                    </p>
+                </div>
+            </section>
+
             <!-- Social Media -->
             <section class="analysis-section social">
                 <div class="section-header">
